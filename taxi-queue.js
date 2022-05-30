@@ -5,7 +5,8 @@ function TaxiQueue(_peopleAdd, _taxi) {
 	
 
 	function joinQueue() {
-		return passengerCounter++;
+	passengerCounter = passengerCounter+1
+		return passengerCounter;
 	}
 
 	function leaveQueue() {
@@ -28,7 +29,7 @@ function TaxiQueue(_peopleAdd, _taxi) {
 
 	function taxiDepart(){
 		if(passengerCounter >= 12 && taxis > 0){
-			return taxis;
+			return taxis = (taxis-- && passengerCounter-12);
 		}
 
 	}
